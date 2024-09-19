@@ -1,0 +1,132 @@
+/* Apply Montserrat font to the whole page */
+body {
+    background-color: #f1f3f5;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Chatbot container styling */
+  .chatbot-container {
+    width: 720px; /* Spacious width */
+    height: 650px;
+    margin: 50px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header with gradient background */
+  .chat-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #009688, #26a69a); /* Smooth teal gradient */
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  /* Chat body styling */
+  .chat-body {
+    height: 500px; /* Larger chat body area */
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fefefe; /* Light cream background for chat body */
+    scrollbar-width: thin; /* Custom scrollbar width for Firefox */
+  }
+  
+  /* Chat footer styling */
+  .chat-footer {
+    padding: 15px;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ced6e0;
+  }
+  
+  /* Input box styling */
+  #userInput {
+    flex: 1;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+  }
+  
+  /* Send button styling */
+  #sendBtn {
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #00b894; /* Soft green button */
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #sendBtn:hover {
+    background-color: #00a076;
+  }
+  
+  /* Chat message styling */
+  .message {
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    max-width: 80%;
+    font-size: 15px; /* Crisp, slightly smaller text */
+    display: inline-block;
+    line-height: 1.4;
+  }
+  
+  /* Bot message (left-aligned) */
+  .bot {
+    background-color: #f1f1f1; /* Light grey for bot messages */
+    color: #2d3436;
+    text-align: left;
+    float: left;
+    clear: both;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* User message (right-aligned) */
+  .user {
+    background-color: #009688; /* Teal color for user messages */
+    color: white;
+    text-align: right;
+    float: right;
+    clear: both;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Bot message links */
+  .bot a {
+    color: #009688;
+    text-decoration: none;
+  }
+  
+  .bot a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Custom scrollbar */
+  .chat-body::-webkit-scrollbar {
+    width: 8px; /* Width of scrollbar */
+  }
+  
+  .chat-body::-webkit-scrollbar-track {
+    background-color: #ecf0f1; /* Light background for scrollbar track */
+    border-radius: 10px;
+  }
+  
+  .chat-body::-webkit-scrollbar-thumb {
+    background-color: #009688; /* Teal scrollbar thumb */
+    border-radius: 10px;
+    border: 2px solid #ecf0f1; /* Creates padding around scrollbar thumb */
+  }
+  
+  /* Firefox scrollbar customization */
+  .chat-body {
+    scrollbar-color: #009688 #ecf0f1;
+    scrollbar-width: thin;
+  }
+  
