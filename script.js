@@ -129,7 +129,7 @@ const predefinedResponses = {
         13. <a href="https://sanminanet.sanmina.com/departments/training/global-it-/oracle-erp/oracle-115/inv-invent/SOP-5-I-INV0018-C_RA_Locator_Creatio.pdf" target="_blank">Locator Creation</a><br>
         14. <a href="https://sanminanet.sanmina.com/departments/training/global-it-/oracle-erp/oracle-115/inv-invent/SOP-5-I-INV0019-C_RA_Safety_Stock.pdf" target="_blank">Safety Stock</a><br>
         15. <a href="https://sanminanet.sanmina.com/departments/training/global-it-/oracle-erp/oracle-115/inv-invent/SOP-5-I-INV0026-C_RA_Pending_Transac.pdf" target="_blank">Pending Transaction Errors</a><br>
-        16. <a href="https://sanminanet.sanmina.com/departments/training/global-it-/oracle-erp/oracle-115/inv-invent/SOP-5-I-INV0027-C_RA_Transactions_Op.pdf" target="_blank">Transactions Open Interface Errors</a>
+        16. <a href="https://sanminanet.sanmina.com/departments/training/global-it-/oracle-erp/oracle-115/inv-invent/SOP-5-I-INV0027-C_RA_Transactions_Op.pdf" target="_blank">Transactions Open Interface Errors</a><br>
         17. <a href="https://sanminanet.sanmina.com/departments/training/global-it-/oracle-erp/oracle-115/inv-invent/SOP-5-I-INV0001-C_RA_Inventory_Item_.pdf" target="_blank">Inventory Item Add & Modify</a>`,
 
 "20": `You selected Module 20: MGR - Management<br>Available SOPs:<br>
