@@ -166,6 +166,7 @@ body {
   z-index: 1000;
 }
 
+/* Clear Chat Button */
 #clearChatBtn {
   position: absolute; /* Position the button absolutely */
   top: 20px; /* Adjust the top distance */
@@ -173,14 +174,14 @@ body {
   z-index: 1; /* Ensure it's above other elements */
 }
 
-
 /* Responsive design: For smaller screens */
 @media (max-width: 768px) {
   .chatbot-container {
     width: 100%;
     height: 85vh; /* Reduce height for smaller screens */
+    margin: 0 10px; /* Add some margin for smaller screens */
   }
-  
+
   /* Adjust chat body height */
   .chat-body {
     padding: 15px;
@@ -188,5 +189,27 @@ body {
 
   .chat-header {
     font-size: 20px; /* Smaller font size for headers */
+  }
+
+  /* Feedback button adjustment */
+  .feedback-button {
+    top: 10px; /* Adjusted for more space */
+    right: 10px; /* Adjusted for more space */
+  }
+
+  /* Clear Chat Button adjustment */
+  #clearChatBtn {
+    top: 10px; /* Adjusted for more space */
+    left: 10px; /* Adjusted for more space */
+  }
+
+  /* Hide Queries & Feedback button on mobile */
+  .feedback-button {
+    display: none; /* Hide on mobile screens */
+  }
+
+  /* Hide copyright section on mobile */
+  .trademark-container {
+    display: none; /* Hide on mobile screens */
   }
 }
