@@ -158,6 +158,21 @@ body {
   color: #333; /* Adjust text color */
 }
 
+/* Feedback button */
+.feedback-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#clearChatBtn {
+  position: absolute; /* Position the button absolutely */
+  top: 20px; /* Adjust the top distance */
+  left: 20px; /* Adjust the left distance */
+  z-index: 1; /* Ensure it's above other elements */
+}
+
 
 /* Responsive design: For smaller screens */
 @media (max-width: 768px) {
@@ -175,4 +190,3 @@ body {
     font-size: 20px; /* Smaller font size for headers */
   }
 }
-

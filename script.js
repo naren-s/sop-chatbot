@@ -2,6 +2,7 @@ const chatBody = document.getElementById('chat-body');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
 
+
 // Predefined responses with numbers and links for SOP documents
 const predefinedResponses = {
   "1": `You selected Module 1: ADRP - Advanced DRP<br>Available SOPs:<br>
@@ -313,24 +314,26 @@ const predefinedResponses = {
   "hi": `Hello! I'm here to help you with SOP documents. Type 'help' to see available modules.`
 };
 
+// Load chat history from local storage on page load
+function loadChatHistory() {
+  const chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+  chatHistory.forEach(chat => appendMessage(chat.sender, chat.message));
+}
+loadChatHistory();
 
 // Function to append messages to the chat window
 function appendMessage(sender, message) {
   const msgDiv = document.createElement('div');
   msgDiv.classList.add('message', sender);
-  msgDiv.innerHTML = message;  // Allow HTML content (like anchor tags) in bot responses
+  msgDiv.innerHTML = message; // Allow HTML content
   chatBody.appendChild(msgDiv);
   chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll to the bottom
 }
 
-// Function to get the bot's response based on the user's message
+// Function to get the bot's response
 function getBotResponse(message) {
   message = message.trim().toLowerCase();
-  if (predefinedResponses[message]) {
-    return predefinedResponses[message];
-  } else {
-    return "Sorry, I didn't understand that. Type 'help' for assistance.";
-  }
+  return predefinedResponses[message] || "Sorry, I didn't understand that. Type 'help' for assistance.";
 }
 
 // Function to handle sending messages
@@ -340,13 +343,26 @@ function sendMessage() {
     appendMessage('user', userMessage);
     userInput.value = '';
 
+    const chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+    chatHistory.push({ sender: 'user', message: userMessage });
+    localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+
     // Handle bot response
     setTimeout(() => {
       const botResponse = getBotResponse(userMessage);
       appendMessage('bot', botResponse);
+
+      chatHistory.push({ sender: 'bot', message: botResponse });
+      localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
     }, 500); // Simulate typing delay
   }
 }
+
+// Clear chat history when the clear button is clicked
+document.getElementById('clearChatBtn').addEventListener('click', function() {
+  localStorage.removeItem('chatHistory'); // Clear history from local storage
+  chatBody.innerHTML = ''; // Clear the chat window
+});
 
 // Send message when clicking the Send button
 sendBtn.addEventListener('click', sendMessage);
@@ -357,3 +373,8 @@ userInput.addEventListener('keypress', function (e) {
     sendMessage();
   }
 });
+
+// Optional: Clear chat history on tab close (if needed)
+// window.addEventListener('beforeunload', function() {
+//   localStorage.removeItem('chatHistory');
+// });
